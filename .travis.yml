@@ -21,7 +21,7 @@ env:
   global: # global settings for all jobs
     - ROS_REPO=ros
     - CCACHE_DIR=$HOME/.ccache # enables C/C++ caching in industrial_ci
-    - AFTER_SETUP_UPSTREAM_WORKSPACE='apt-get install -y wget && wget https://raw.githubusercontent.com/clearpathrobotics/public-rosdistro/master/rosdep/50-clearpath.list -O /etc/ros/rosdep/sources.list.d/50-clearpath.list  && rosdep update'
+    - AFTER_SETUP_TARGET_WORKSPACE='apt-get install -y wget && wget https://raw.githubusercontent.com/clearpathrobotics/public-rosdistro/master/rosdep/50-clearpath.list -O /etc/ros/rosdep/sources.list.d/50-clearpath.list  && rosdep update'
   matrix: # each line is a job
     - ROS_DISTRO="melodic"
 
